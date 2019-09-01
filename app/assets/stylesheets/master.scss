@@ -1,4 +1,25 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap');
+
+body {
+  background: image_url('wheat.png');
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.navbar {
+  background: image_url('papyrus-dark.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+
+}
+
+.navbar-inverse .navbar-brand {
+  color: #E3E85A;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:0;
+  padding:0;
+}
 
 .booyah-box {
   -webkit-box-shadow:1px 1px 2px 0 #d0d0d0;
@@ -10,9 +31,4 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin:0;
-  padding:0;
 }
