@@ -30,6 +30,22 @@
 
  <div class="clear"></div>
 
+ <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :caption %>
+  <%= f.input :picture %>
+  <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+<% end %>
+
+  <div class="row">
+    <% @place.photos.each do |photo| %>
+      <div class="col-4">
+        <%= image_tag photo.picture.url, class: 'img-fluid' %>
+        <h4><%= photo.caption %></h4>
+        <small><%= photo.user.email %></small>
+      </div>
+    <% end %>
+  </div>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -75,7 +91,7 @@
   </div>
 
   <div class="clear"></div>
-  
+
   <div class="row">
     <% @place.comments.each do |comment| %>
       <div class="col-12 col-sm-6">
